@@ -281,7 +281,7 @@ class LP1WithLora_SVGD(nn.Module):
                                 modified_modules=['c_fc', 'c_proj'],
                                 lora_r=4))
             self.delta_models[i].log()
-            self.delta_models[i].freeze_module(exclude=["deltas", "c_fc", "c_proj", "ln_final"], set_state_dict=True)
+            self.delta_models[i].freeze_module(exclude=["deltas"], set_state_dict=True)
             print(f"\nBackbone Model {i} after adding LoRa + Freezing:")
             self.delta_models[i].log()
 
