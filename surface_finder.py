@@ -23,7 +23,7 @@ parser.add_argument('--margin_bottom', type=float, default=0.2, metavar='M', #0.
                     help='bottom margin (default: 0.)')
 parser.add_argument('--margin_top', type=float, default=0.1, metavar='M', #0.3
                     help='top margin (default: 0.2)')
-parser.add_argument('--num_points', type=int, default=0, metavar='N',
+parser.add_argument('--num_points', type=int, default=40, metavar='N',
                     help='number of points between models (default: 6)')
 
 parser.add_argument('--dataset', type=str, default='CIFAR10', metavar='DATASET',
