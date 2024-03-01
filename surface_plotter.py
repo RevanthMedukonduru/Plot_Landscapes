@@ -46,6 +46,7 @@ def Plot_Surfaces(data, feature):
 
     # Prepare the plot
     plt.figure(figsize=(10, 8))
+    plt.grid(False)
     plt.contourf(grid[:, :, 0], grid[:, :, 1], values, levels=80, cmap='jet_r', alpha=0.8)
     plt.colorbar(label=feature)
 
