@@ -167,7 +167,7 @@ for i in range(1): # took model 0 as center/starting point and travelling across
             tr_loss_v, tr_nll_v, tr_acc_v = tr_res['loss'], tr_res['nll'], tr_res['accuracy']
             te_loss_v, te_nll_v, te_acc_v = te_res['loss'], te_res['nll'], te_res['accuracy']
             
-            grid[i, iter_i, iter_j] = [bend_coordinates[i][0]+(alpha*dx), bend_coordinates[i][1]+(beta*dy)]
+            grid[i, iter_i, iter_j] = get_xy(get_weights(base_model), temp_params[0], u, v)
             
             tr_loss[i, iter_i, iter_j] = tr_loss_v
             tr_nll[i, iter_i, iter_j] = tr_nll_v
