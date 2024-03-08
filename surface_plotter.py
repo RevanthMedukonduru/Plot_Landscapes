@@ -63,8 +63,6 @@ def Plot_Surfaces(data, feature):
     for i, bend_coord in enumerate(bend_coordinates): 
         plt.scatter(bend_coord[0], bend_coord[1], c=colors_1[i], s=100, label=f'Optima {i+1}', edgecolors='black', zorder=1)
 
-    # data type of args.connectOptimas is bool
-    print(args.connectOptimas, "Connect optimas", type(args.connectOptimas))
     if args.connectOptimas:    
         plt.plot(bend_coordinates[:, 0], bend_coordinates[:, 1], c='k', linestyle='--', dashes=(3, 4), linewidth=3, zorder=2)
         plt.plot(bend_coordinates[[0, 2], 0], bend_coordinates[[0, 2], 1], c='k', linestyle='--', dashes=(3, 4), linewidth=3, zorder=2)
